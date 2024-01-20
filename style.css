@@ -1,0 +1,145 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     font-family: "Nunito", sans-serif;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     background: linear-gradient(315deg, rgba(209, 19, 200, 0.162) 0%, rgba(87, 244, 163, 0.633) 44%);
+}
+
+.container {
+     min-width: 500px;
+     margin-top: 50px;
+}
+
+.wrapper {
+     background-color: #fff;
+     padding: 10px 30px;
+     margin-top: 10px;
+}
+.kitchen-title {
+     text-align: center;
+     font-size: 30px;
+     position: relative;
+     right: 20px;
+}
+
+.kitchen-header {
+     margin: 30px 0 20px;
+     display: flex;
+}
+
+.kitchen-header input {
+     height: 42px;
+
+     min-width: 400px;
+     padding: 10px;
+     font-size: 18px;
+     border: 1.5px solid #333;
+     border-bottom-left-radius: 22px;
+     border-top-left-radius: 22px;
+}
+
+.kitchen-header button {
+     font-size: 18px;
+     height: 42px;
+     padding: 0 20px;
+     cursor: pointer;
+     font-family: "Nunito", sans-serif;
+     background-color: black;
+     color: white;
+     border: none;
+     outline: none;
+     transition: 0.3s;
+     border-bottom-right-radius: 22px;
+     border-top-right-radius: 22px;
+}
+
+.kitchen-header button:hover {
+     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.kitchen-items-list {
+     text-align: left;
+     list-style: none;
+     perspective: 1000px;
+}
+
+.kitchen-items-list .li {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 10px 12px;
+     margin: 4px 0;
+     font-size: 18px;
+     font-weight: 700;
+     color: black;
+     animation: 0.3s ease-in-out;
+     animation-name: slideIn;
+     margin-bottom: 18px;
+     border-radius: 12px;
+     border-bottom: 0.5px solid #666;
+     padding-left: 8px;
+}
+.fa-circle {
+     margin-right: 8px;
+}
+.kitchen-items-list .text-decoration {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     text-decoration: line-through;
+     padding: 10px 12px;
+     margin: 4px 0;
+     font-size: 18px;
+     font-weight: 700;
+     color: black;
+     animation: 0.3s ease-in-out;
+     animation-name: slideIn;
+     margin-bottom: 18px;
+     border-radius: 12px;
+     border-bottom: 1px solid #666;
+}
+.kitchen-items-list i {
+     padding: 2px;
+     transition: all 1 ease;
+}
+
+.fa-trash,
+.fa-pen-to-square {
+     background-color: white;
+     color: #000;
+     border-radius: 4px;
+}
+.fa-pen-to-square {
+     margin-left: auto;
+     margin-right: 1rem;
+}
+
+.kitchen-items-list i:hover {
+     cursor: pointer;
+     transform: scale(1.1);
+}
+
+@keyframes slideIn {
+     from {
+          opacity: 0;
+          transform: rotateX(60deg) translateY(-10px);
+     }
+     to {
+          opacity: 1;
+          transform: rotateX(0deg) translateY(0px);
+     }
+}
+
+.slideOut {
+     transform: rotateX(0deg) translateY(0px);
+     opacity: 0;
+     transition: 0.6s;
+}
